@@ -1,4 +1,5 @@
 <script>
+import registrationService from '@/services/registration'
 
 export default {
   name: 'RegisterPage',
@@ -8,12 +9,20 @@ export default {
         username: '',
         emailAddress: '',
         password: ''
-      }
+      },
+      errorMessage: ''
     }
   },
   methods: {
     submitForm () {
-
+      // TODO: 데이터 검증 하기
+      registrationService.register(this.form)
+        .then(() => {
+          this.$router.push({ name: 'LoginPage' })
+        })
+        .catch((error) => {
+          this.errorMessage = 'Failed to register user. Reason: ' + (error.message ? error.message : 'Unknown') + '.'
+        })
     }
   }
 }
@@ -25,6 +34,7 @@ export default {
       <div class="register-form">
         <div class="logo-wrapper">...</div>
         <form @submit.prevent="submitForm">
+          <div v-show="errorMessage" class="alert alert-danger failed"></div>
           <div class="form-group">
             <input id="username" v-model="form.username" class="form-control" type="text">
           </div>
