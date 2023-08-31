@@ -38,38 +38,40 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="register-form">
-        <LogoComponent />
-        <form @submit.prevent="submitForm">
-          <div v-show="errorMessage" class="alert alert-danger failed"></div>
-          <div class="form-group">
-            <input
-              id="username"
-              v-model="form.username"
-              class="form-control"
-              type="text"
-            />
-          </div>
-          <div class="form-group">
-            <input
-              id="emailAddress"
-              v-model="form.emailAddress"
-              class="form-control"
-              type="email"
-            />
-          </div>
-          <div class="form-group">
-            <input
-              id="password"
-              v-model="form.password"
-              class="form-control"
-              type="password"
-            />
-          </div>
-          <button class="btn btn-primary" type="submit"></button>
-        </form>
+  <div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="register-form">
+          <LogoComponent />
+          <form @submit.prevent="submitForm">
+            <div v-show="errorMessage" class="alert alert-danger failed"></div>
+            <div class="form-group">
+              <input
+                id="username"
+                v-model="form.username"
+                class="form-control"
+                type="text"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                id="emailAddress"
+                v-model="form.emailAddress"
+                class="form-control"
+                type="email"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                id="password"
+                v-model="form.password"
+                class="form-control"
+                type="password"
+              />
+            </div>
+            <button class="btn btn-primary" type="submit"></button>
+          </form>
+        </div>
       </div>
     </div>
     <PageFooter />
