@@ -1,5 +1,10 @@
 {
   "logo": {
     "tagline": "오픈 소스 작업 관리 도구"
+  },
+  "pageFooter": {
+    "about": "더 알아보기",
+    "termsOfService": "서비스 약관",
+    "privacyPolicy": "개인정보 정책"
   }
 }

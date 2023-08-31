@@ -1,5 +1,6 @@
 <script>
 import LogoComponent from '@/components/LogoComponent.vue'
+import PageFooter from '@/components/PageFooter.vue'
 
 export default {
   name: 'RegisterPage',
@@ -14,7 +15,8 @@ export default {
     }
   },
   components: {
-    LogoComponent
+    LogoComponent,
+    PageFooter
   },
   methods: {
     submitForm () {
@@ -70,11 +72,7 @@ export default {
         </form>
       </div>
     </div>
-
-    <footer class="footer">
-      <span>...</span>
-      <ul class="list-inline justify-content-end"></ul>
-    </footer>
+    <PageFooter />
   </div>
 </template>
 
@@ -86,15 +84,5 @@ export default {
 .register-form {
   margin-top: 50px;
   max-width: 320px;
-}
-
-.logo-wrapper {
-  margin-bottom: 40px;
-}
-
-.footer {
-  width: 100%;
-  line-height: 40px;
-  margin-top: 50px;
 }
 </style>
