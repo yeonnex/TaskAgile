@@ -6,5 +6,24 @@
     "about": "더 알아보기",
     "termsOfService": "서비스 약관",
     "privacyPolicy": "개인정보 정책"
+  },
+  "registerPage": {
+    "form": {
+      "username": {
+        "label": "이름",
+        "required": "사용자 이름은 필수입니다."
+      },
+      "emailAddress": {
+        "label": "이메일",
+        "required": "이메일은 필수입니다."
+      },
+      "password": {
+        "label": "비밀번호",
+        "required": "비밀번호는 필수입니다.",
+        "minLength": "비멀번호가 너무 짦습니다. 최소 {minLength} 자 이상이어야 합니다.",
+        "maxLength": "비밀번호가 너무 깁니다. 최소 {maxLength} 자 이하여야 합니다."
+      },
+      "submit": "게정 생성"
+    }
   }
 }
